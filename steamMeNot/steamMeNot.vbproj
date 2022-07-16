@@ -34,9 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="escsoft">
-      <HintPath>..\..\escsoft_api\escsoft_api\bin\Debug\net6.0-windows\escsoft.dll</HintPath>
-    </Reference>
+    <PackageReference Include="escsoft" Version="1.0.5" />
   </ItemGroup>
 
 </Project>

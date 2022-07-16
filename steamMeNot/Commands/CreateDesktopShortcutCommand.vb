@@ -8,8 +8,6 @@ Public Class CreateDesktopShortcutCommand : Implements ICommand
         Dim shell As WshShell = New WshShell()
         Dim shortcutAddress As String = CStr(shell.SpecialFolders.Item(shDesktop)) & "\SteamMeNot.lnk"
         Dim shortcut As IWshShortcut = CType(shell.CreateShortcut(shortcutAddress), IWshShortcut)
-        'shortcut.Description = "New shortcut for a Notepad"
-        'shortcut.Hotkey = "Ctrl+Shift+N"
         shortcut.Arguments = "%1"
         shortcut.TargetPath = ControlChars.Quote & Environment.ProcessPath & ControlChars.Quote
         shortcut.Save()
